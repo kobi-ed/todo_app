@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}| Home{% endblock %}
+{% block body %}
+    
+    <section id="add-field">
+        <form action="/" method="POST">
+            <label for="task-content">Task</label>
+            <input type="text" name="task-content" id="task-content" required>
+            <input type="submit" name="add" value="Add">
+        </form>
+    </section>
+    {% if tasks|length < 1 %}
+    <h3>No tasks!</h3>
+    {% else %}
+    {% for task in tasks %}
+    <section id="tasks">
+        <p class="task-field">{{ task.todo_task }}</p>
+        <ul class="task-actions">
+            <li class="task-item update-task"><a href="/update/{{ task.todo_ID }}">Update</a></li>
+            <li class="task-item delete-task"><a href="/delete/{{ task.todo_ID }}">Delete</a></li>
+        </ul>
+    </section>
+    {% endfor %}
+    {% endif %}
+    {% endblock %}

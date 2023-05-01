@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}| Update{% endblock %}
+{% block body %}
+    <section id="update-field">
+        <form action="/update/{{ task.todo_ID }}" method="POST">
+            <label for="update-content">Update Task</label>
+            <input type="text" name="task-content" id="task-content" value="{{ task.todo_task }}" required>
+            <input type="submit" name="add" value="Update">
+        </form>
+    </section>
+{% endblock %}
