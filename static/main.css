@@ -13,7 +13,7 @@ header {
 
 a {
     text-decoration: none;
-    color:cadetblue;
+    /* color:cadetblue; */
 }
 
 .task-field {
@@ -32,9 +32,34 @@ a {
 }
 
 .task-item{
-    color: aliceblue;
+    color:tomato;
     padding:1% 5%;
+    margin: 0 2.5%;
     font-weight: bold;
+    border: 1px solid blue;
+    border-radius: 5px;
+    background-color: azure;
+}
+
+.task-item:hover{
+    background-color:antiquewhite;
+}
+
+a.nav {
+    border: 1px solid blue;
+    padding:1% 3%;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: lightgreen;
+    color: tomato;
+}
+
+a.nav:hover {
+    background-color: antiquewhite;
+}
+
+.nav {
+    margin: 3% 0;
 }
 
 ul {

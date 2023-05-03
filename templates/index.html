@@ -16,8 +16,8 @@
     <section id="tasks">
         <p class="task-field">{{ task.todo_task }}</p>
         <ul class="task-actions">
-            <li class="task-item update-task"><a href="/update/{{ task.todo_ID }}">Update</a></li>
-            <li class="task-item delete-task"><a href="/delete/{{ task.todo_ID }}">Delete</a></li>
+            <a href="/update/{{ task.todo_ID }}" class="task-item update-task"><li>Update</li></a>
+            <a href="/delete/{{ task.todo_ID }}" class="task-item delete-task"><li>Delete</li></a>
         </ul>
     </section>
     {% endfor %}
